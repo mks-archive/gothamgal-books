@@ -301,7 +301,12 @@ class Gotham_Gal_Book_Collection {
    * @param array $args
    */
   function __construct( $args = array() ) {
+    $args = wp_parse_args( $args, array(
+      'posts_per_page' => -1,
+      'post_status' => 'publish',
+    ));
     $args['post_type'] = Gotham_Gal_Book::POST_TYPE;
+
     $this->_query = new WP_Query( $args );
   }
 
