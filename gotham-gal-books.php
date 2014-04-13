@@ -160,7 +160,7 @@ jQuery(function($) {
      * @var Gotham_Gal_Book $book
      */
     foreach( $books->collection() as $book ):
-      ?><p><?php $book->the_cover_image_link(); ?><?php $book->the_title_link(); ?> &ndash; <?php $book->the_content();?></p><?php
+      ?><p class="cleared-book-image"><?php $book->the_cover_image_link(); ?><?php $book->the_title_link(); ?> &ndash; <?php $book->the_content();?></p><?php
     endforeach;
     $books_html = ob_get_clean();
     $html ="<div class=\"books-page-container\">{$books_html}<div class=\"clearfix\"></div></div>";
@@ -218,7 +218,7 @@ class Gotham_Gal_Book {
   }
 
   function title_link() {
-    return "<a target=\"_blank\" href=\"{$this->asin_url}\">{$this->title}</a>";
+    return "<a target=\"_blank\" href=\"{$this->asin_url}\" class=\"gg-amazon-text-link\">{$this->title}</a>";
   }
 
   function content() {
@@ -242,7 +242,7 @@ class Gotham_Gal_Book {
   }
 
   function cover_image_link() {
-    return "<a target=\"_blank\" href=\"{$this->asin_url}\" >{$this->cover_image_html}</a>";
+    return "<a target=\"_blank\" href=\"{$this->asin_url}\" class=\"gg-amazon-link\" >{$this->cover_image_html}</a>";
   }
 
   /**
