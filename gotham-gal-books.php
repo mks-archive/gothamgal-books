@@ -48,25 +48,19 @@ class Gotham_Gal_Books {
       ),
       'supports'            => array( 'title', 'editor' ),
       'taxonomies'          => array(),
-      'hierarchical'        => true,
-      'public'              => true,
+      'hierarchical'        => false,
+      'public'              => false,
       'show_ui'             => true,
       'show_in_menu'        => true,
-      'show_in_nav_menus'   => true,
+      'show_in_nav_menus'   => false,
       'show_in_admin_bar'   => true,
-      'menu_position'       => 5,
-      'menu_icon'           => '',
+      'menu_icon'           => 'dashicons-book-alt',
       'can_export'          => true,
-      'has_archive'         => true,
+      'has_archive'         => false,
       'exclude_from_search' => false,
-      'publicly_queryable'  => true,
-      'query_var'           => Gotham_Gal_Book::POST_TYPE,
-      'rewrite'             => array(
-        'slug'                => 'books',
-        'with_front'          => true,
-        'pages'               => true,
-        'feeds'               => true,
-      ),
+      'publicly_queryable'  => false,
+      'query_var'           => false,
+      'rewrite'             => false,
       'capability_type'     => 'page',
       'form'                => 'after-title',
     ));
@@ -97,6 +91,8 @@ function _edit_form_after_title( $post ) {
   function the_form( $post ) {
     $book = new Gotham_Gal_Book( $post ); ?>
 <style>
+  content: "\f337";
+
 #gg-books-form {
   margin: 1em ;
 }
