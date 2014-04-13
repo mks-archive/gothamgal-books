@@ -6,3 +6,15 @@ This plugin adds a "Books" custom post type with an "Archive" status option for 
 
 ##Download
 You can download a ZIP copy of the plugin [here](https://github.com/newclarity/gothamgal-books/archive/master.zip) but I'd suggest renaming the subdirectory from `gothamgal-books-master` to just `gothamgal-books`.
+
+##Screenshots
+
+###Books Post Type in the Admin
+![Books Post Type in the Admin](screenshots/books-post-type-in-admin.png)
+
+###ASIN and Archiving
+![ASIN and Archiving](screenshots/asin-and-archiving.png)
+
+###Page using a Shortcode
+![ASIN and Archiving](screenshots/page-using-shortcode.php.png)
+
