@@ -5,6 +5,7 @@
  * Author: Mike Schinkel
  * Author URI: http://about.me/mikeschinkel
  * License: GPLv2
+ * Version: 1.0
  * @see: http://avc.com/2014/04/a-wordpress-plugin-for-a-books-list/
  */
 
